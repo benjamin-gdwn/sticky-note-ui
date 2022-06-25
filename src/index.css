@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(-45deg, #b5b58b, #52FB9A, #FA8ED3, #23a6d5 );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #ffffc2;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+input,
+textarea {
+  outline: none;
+  resize: none;
+  background-color: #ffffc2;
+}
+
+.notes-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 0;
+}
+
+.app-header__title {
+  display: flex;
+  justify-content: center;
+
+  margin: 10px 20px 0px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.app-header__controls {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  margin: 10px 0 0 10px;
+}
+
+.search,
+.add-new {
+  opacity: 0.75;
+  text-transform: uppercase;
+  font-family: "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #ffffc2;
+  font-size: 14px;
+  padding: 5px;
+  margin: 8px;
+  border-radius: 15px;
+  border: none;
+  color: #3a5664;
+  box-shadow: 2px 2px 3px lightgrey;
+}
+
+.add-new:hover {
+  box-shadow: 4px 4px 6px lightgrey;
+  background-color: #b5b58b;
+  color: #ffffc2;
+}
+
+.search:hover {
+  background-color: #b5b58b;
+  color: #ffffc2;
+  box-shadow: 4px 4px 6px lightgrey;
+}
+.search:focus {
+  background-color: #b5b58b;
+  color: #ffffc2;
+}
+
+.search {
+  flex-grow: 1;
+  max-width: 300px;
+}
+
+.add-new {
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  font-weight: bolder;
+  outline: none;
+}
+
+.note {
+  background: linear-gradient(to bottom right, #ffffc2 0%, #fdfddb 100%);
+  opacity: 0.75;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background-color: #ffffc2;
+  border: 1px solid grey;
+  box-shadow: 2px 2px 3px lightgrey;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.note:hover {
+  background-color: #b5b58b;
+  color: #ffffc2;
+  box-shadow: 6px 6px 10px lightgrey;
+}
+
+.note__title,
+.note__description {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  width: 100%;
+  padding: 8px 14px;
+  background: transparent;
+  border: none;
+  text-align: center;
+  color: #7b917a;
+}
+
+.note__title {
+  text-transform: uppercase;
+
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration-line: underline;
+  text-decoration-color: #7b917a;
+  text-decoration-style: double;
+  text-decoration-thickness: 2px;
+}
+
+.note__description {
+  text-transform: capitalize;
+  flex-grow: 1;
+  font-size: 14px;
+}
+
+.note__delete {
+  position: absolute;
+  top: 1px;
+  right: 150px;
+  font-size: 20px;
+  color: lightgrey;
+  padding: 5px;
+}
+
+.note__delete:hover {
+  color: #b5b58b;
+  cursor: pointer;
+  font-size: 22px;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
